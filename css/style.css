@@ -1,0 +1,164 @@
+.blurred-text {
+    filter: blur(3px);
+    transition: filter 0.3s;
+}
+.blurred-text:hover {
+    filter: blur(0);
+    cursor: url("../img/walking-stick.png"), auto;
+}
+
+.header-link {
+    color: black;
+    text-decoration: none;
+}
+
+.header-link:hover {
+    text-decoration: underline;
+    cursor: url("../img/walking-stick.png"), auto;
+}
+
+html, body {
+    height: 100%; /* Zorgt dat de html en body de volledige hoogte van de viewport innemen */
+    display: flex;
+    flex-direction: column; /* Maakt de hoofdelementen gestapeld */
+    margin: 0;
+    cursor: url("../img/walking-stick.png"), auto;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    background-color: #d8b2a1;
+}
+
+main, main:hover {
+    cursor: url("../img/walking-stick.png"), auto;
+}
+
+header {
+    background-color: #A56A51;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    cursor: url("../img/walking-stick.png"), auto;
+}
+
+header h1 {
+    margin: 0;
+    font-style: italic;
+    color: #000000;
+    font-family: cursive;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    cursor: url("../img/walking-stick.png"), auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    cursor: url("../img/walking-stick.png"), auto;
+}
+
+main {
+    flex: 1; /* Zorgt dat main de resterende ruimte inneemt */
+    padding: 2em;
+    max-width: 800px;
+    margin: auto;
+    overflow: auto; /* Voegt scroll toe indien nodig */
+    cursor: url("../img/walking-stick.png"), auto;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center; /* Horizontaal centreren */
+    align-items: center; /* Verticaal centreren (indien nodig) */
+    margin-top: 20px; /* Optionele marge voor wat ruimte boven de video */
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    cursor: url("../img/walking-stick.png"), auto;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+#over-mij {
+    display: flex;
+    align-items: center;
+    padding: 2em;
+    gap: 2em;
+}
+
+.profiel-foto {
+    flex-shrink: 0;
+    width: 15%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.profiel-foto img {
+    width: 100%;
+    height: auto;
+}
+
+.profiel-tekst h2 {
+    margin-top: 0;
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    #over-mij {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .profiel-foto {
+        width: 25%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    .profiel-foto {
+        width: 20%;
+    }
+}
+
+@media (min-width: 1201px) {
+    .profiel-foto {
+        width: 15%;
+    }
+}
